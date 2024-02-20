@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<!--
+?php include(__DIR__ ."/dbTest.php") ?>
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MovieStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login Page</title>
+    
+
+
+
+
+    <script type="text/javascript">
+        function login(){
+            
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("psw").value;
+            var LoggedIn = false;
+                //once connected to db change this to a db statement
+            if ((username === "teamMember") && (password ==="testingLogin")){
+                document.getElementById("status").innerText = "Success!";
+                LoggedIn = true;
+            }
+            else{
+                document.getElementById("status").innerText = "Failed login!";
+            } 
+        }
+
+        function register(){
+            window.location.href = "register.html"
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div class="header-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><h1><span style="color: black">Movie</span><span style = "color: #29c68c">Mingle</span> </h1></li>
+                    
+                    <li class="nav-link"><a href="MVP.html">Home</a></li>
+                    <li class="nav-link"><a href="Reviews.html">Reviews</a></li>
+                    <li class="nav-link"><a href="About.html">About</a></li>
+                    <li class="nav-link"><a href="Contact.html">Contact</a></li>
+                    <li class="login nav-link" style="float:right"><a class="active" href="login.html"><i class="fa fa-user-o"></i> Login</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+
+
+<main>
+   
+    <form >
+        <h2><span style = "color: #29c68c">Login</span></h2>
+        <p id = 'status'></p>
+        <div>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+
+            <button type="button" onclick = 'login()'>Login</button>
+            <button type="button" onclick = 'register()'>Register / Sign-up</button>
+        </div>
+        
+    </form>
+</main>
+
+<footer>
+    <div class="footer">
+        <div class="footer-content">
+            
+            
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/TheUniversityOfManchester/?locale=en_GB" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/OfficialUoM?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/officialuom/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/universitymanchester" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://uk.linkedin.com/school/university-of-manchester/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            
+            <div class="footer-bottom">
+                <p>copyright &copy; 2024 Group project Team Z4. All rights reserved.</p>
+                <p class="up"><a href="mvp.html">     <i class="fa-solid fa-arrow-up"></i>  Scroll to Top</a></p>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+</html>
+
+
